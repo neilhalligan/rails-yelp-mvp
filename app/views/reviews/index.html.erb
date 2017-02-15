@@ -1,0 +1,7 @@
+<% @reviews = @reviews.select { |review| review.restaurant_id = params[:id] }%>
+<h4><%= @reviews.first.restaurant.name%></h4>
+<% @reviews.each do |review| %>
+  <br>
+ <%= review.content %>
+ <br>
+ <% end %>
